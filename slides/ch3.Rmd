@@ -1,0 +1,135 @@
+---
+title: Data Analysis and Visualization
+subtitle: Chapter 3. Exploratory Data Analysis in R
+author: Iñaki Úcar
+institute:
+  - Department of Statistics | uc3m-Santander Big Data Institute
+  - Bachelor in Data and Business Analytics
+date: >
+  Licensed under Creative Commons Attribution
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+  Last generated: `r Sys.Date()`
+output:
+  xaringan::moon_reader:
+    chakra: assets/remark-latest.min.js
+    lib_dir: assets
+    css: [default, metropolis, metropolis-fonts, assets/theme.css, assets/colors.css]
+    nature:
+      beforeInit: assets/macros.js
+      highlightStyle: vs
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: base24, middle, clear
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version=FALSE)
+knitr::opts_chunk$set(message=FALSE, warning=FALSE, fig.align="center", dpi=150)
+knitr::opts_chunk$set(cache=TRUE, cache.path="ch3_cache/html/")
+knitr::opts_chunk$set(fig.path="ch3_files/figure-html/")
+
+library(ggplot2)
+theme_set(theme_gray(base_size=16))
+```
+
+```{r xaringanExtra, echo=FALSE, cache=FALSE}
+xaringanExtra::use_share_again()
+xaringanExtra::style_share_again(share_buttons="none")
+xaringanExtra::use_scribble()
+xaringanExtra::use_panelset(in_xaringan=TRUE)
+```
+
+- [Types of Data](ch3.html#3)
+- [Catalog of Graphs and Applications](ch3_1.html#2)
+
+---
+class: inverse, center, middle
+
+# Types of Data
+
+---
+class: base24
+
+# Forms of Data
+
+--
+
+### Entities
+
+- The objects of interest, what we wish to visualize (e.g. a *sale*)
+- Also known as **observations**, **records**, **instances**, **cases**...
+
+--
+
+### Relations
+
+- Relationships between entities (e.g. a *customer* makes a *sale*)
+- Many kinds: hierarchical, network, temporal, causal...
+- Sometimes provided explicitly (e.g. edges in a network),
+  sometimes its discovery is the purpose of the visualization (e.g. correlation)
+
+--
+
+### Attributes
+
+- Properties of entities and relations (e.g. *price* and the *profit* of a sale)
+- Also known as **features**, **variables**, **covariates**, **dimensions**...
+- Can be qualitative or quantitative
+
+---
+
+# Types of Attributes
+
+--
+
+### Stevens' typology of measurement scales (1946)
+
+- **Nominal**: purely qualitative, categories without order (e.g. fruits)
+- **Ordinal**: qualitative with order (e.g. weekdays)
+- **Interval**: quantitative data with no zero point (e.g. time of departure)
+- **Ratio**: quantitative data with zero point (e.g. money)
+
+--
+
+### In practice
+
+.font120[
+- **Categorical data**: nominal or ordinal (e.g. fruits, weekdays)
+- **Discrete data**: ordered categories or counts (e.g. number of visits)
+- **Continuous data**: interval or ratio (e.g. time, money)
+]
+
+--
+
+### Uncertainty
+
+- Continuous data often come with a measure of uncertainty
+- Can be represented as an additional attribute (e.g. confidence interval)
+- Visualization of uncertainty is important but often overlooked
+
+---
+class: base24
+
+# Data Analysis
+
+.pull-left[
+## Tidy Data
+
+$N\times P$ data frame:
+
+|      | Attr1 | Attr2 | Attr3 | ... | AttrP |
+|-----:|------:|------:|------:|----:|-------|
+| Obs1 |       |       |       |     |       |
+| Obs2 |       |       |       |     |       |
+| Obs3 |       |       |       |     |       |
+|  ... |       |       |       |     |       |
+| ObsN |       |       |       |     |       |
+]
+
+.pull-right[
+## Data Dimensions
+
+- One dimension:<br>**univariate** analysis
+- Two dimensions:<br>**bivariate** analysis
+- More than two dimensions:<br>**multivariate** analysis
+]

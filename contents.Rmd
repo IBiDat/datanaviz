@@ -1,0 +1,81 @@
+---
+title: "Course contents"
+---
+
+## [Chapter 0](slides/ch0.html). Course Description
+
+- Big picture
+- Background and goals
+- Course contents and schedule
+- Logistics
+- Communication and tutoring
+- Course assessment
+- [Example of final project](slides/ch0.html#8)
+
+<aside class="slides">
+```{r, echo=FALSE}
+xaringanExtra::embed_xaringan("slides/ch0.html", "4:3")
+```
+</aside>
+
+## [Chapter 1](slides/ch1_1.html). Fundamentals of Statistical Graphs
+
+- [Introduction to DataViz](slides/ch1_1.html#3)
+- [Graphical Integrity](slides/ch1_2.html#3)
+- [Graphical Perception](slides/ch1_3.html#3)
+- [Principles of Graphical Representation](slides/ch1_4.html#3)
+
+<aside class="slides">
+```{r, echo=FALSE}
+xaringanExtra::embed_xaringan("slides/ch1_1.html", "4:3")
+```
+</aside>
+
+## [Chapter 2](slides/ch2.html). The Grammar of Graphs in R
+
+- [Building Graphs Layer by Layer](slides/ch2.html#3)
+- [Scales and Guides](slides/ch2.html#40)
+- [Coordinate Systems](slides/ch2.html#45)
+- [Faceting](slides/ch2.html#50)
+- [Themes](slides/ch2.html#54)
+- [Annotations](slides/ch2.html#57)
+- [Arranging Plots](slides/ch2.html#66)
+
+<aside class="slides">
+```{r, echo=FALSE}
+xaringanExtra::embed_xaringan("slides/ch2.html", "4:3")
+```
+</aside>
+
+## [Chapter 3](slides/ch3.html). Exploratory Data Analysis in R
+
+- [Types of Data](slides/ch3.html#3)
+- [Catalog of Graphs and Applications](slides/ch3_1.html#2)
+  - [Distribution](slides/ch3_1.html#3) Graphs
+  - [Correlation](slides/ch3_2.html#3) Graphs
+  - [Ranking](slides/ch3_3.html#3) Graphs
+  - [Part of a Whole](slides/ch3_4.html#3) Graphs
+  - [Evolution](slides/ch3_5.html#3) Graphs
+
+<aside class="slides">
+```{r, echo=FALSE}
+xaringanExtra::embed_xaringan("slides/ch3_1.html", "4:3")
+```
+</aside>
+
+## [Chapter 4](slides/ch4_2.html). Advanced Visualization and Communication
+
+- Geospatial Analysis
+  - [Maps](slides/ch3_6.html#3)
+- Network Analysis
+  - [Flow](slides/ch3_7.html#3) Charts
+- [Other Resources](slides/ch3_8.html#3)
+- [Reproducible Documents](slides/ch4_2.html#3)
+
+<aside class="slides">
+```{r, echo=FALSE}
+xaringanExtra::embed_xaringan("slides/ch4_2.html", "4:3")
+```
+</aside>
+
+## Chapter 5. Use Cases in Statistics

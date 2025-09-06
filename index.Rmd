@@ -1,0 +1,32 @@
+---
+title: "Data Analysis and Visualization"
+description: |
+  Homepage and materials for the course on
+  [data analysis and visualization](https://aplicaciones.uc3m.es/cpa/generaFicha?est=203&anio=2025&plan=560&asig=20352&idioma=2),
+  as part of uc3m's
+  [Bachelor in Data and Business Analytics](https://www.uc3m.es/bachelor-degree/statistics-business)
+site: distill::distill_website
+---
+
+<iframe class="l-screen" scrolling="no" src="/dataviz/" style="border: 0px none; height: 0px"></iframe>
+<script>
+  const iframe = document.querySelector('iframe');
+  function resizeIframe() {
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    iframeDoc.querySelector('d-front-matter').remove();
+    iframeDoc.querySelector('header').remove();
+    iframeDoc.querySelector('d-title').remove();
+    iframeDoc.querySelector('.section-separator').remove();
+    iframeDoc.querySelector('d-byline').remove();
+    iframeDoc.querySelector('d-appendix').remove();
+    iframeDoc.querySelector('.distill-site-footer').remove();
+    iframeDoc.querySelector('d-article').style.paddingTop = '0px';
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+  }
+  window.addEventListener('message', (event) => {
+    if (event.data === 'resize') {
+      resizeIframe();
+    }
+  });
+  iframe.onload = resizeIframe;
+</script>

@@ -1,0 +1,394 @@
+---
+title: Data Analysis and Visualization
+subtitle: Chapter 0. Course Description
+author: Iñaki Úcar
+institute:
+  - Department of Statistics | uc3m-Santander Big Data Institute
+  - Bachelor in Data and Business Analytics
+date: >
+  Licensed under Creative Commons Attribution
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+  Last generated: `r Sys.Date()`
+output:
+  xaringan::moon_reader:
+    chakra: assets/remark-latest.min.js
+    lib_dir: assets
+    css: [default, metropolis, metropolis-fonts, assets/theme.css]
+    nature:
+      beforeInit: assets/macros.js
+      highlightStyle: vs
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: split-three
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version=FALSE)
+knitr::opts_chunk$set(message=FALSE, warning=FALSE, fig.align="center", dpi=150)
+
+library(ggplot2)
+theme_set(theme_gray(base_size=16))
+```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_share_again()
+xaringanExtra::style_share_again(share_buttons="none")
+xaringanExtra::use_scribble()
+```
+
+# Big Picture
+
+.column[
+![:vspace 145]()
+### Programming I
+- Data reading
+- Data transformation ⟶
+]
+
+.column[
+![:vspace 40]()
+### Data Analytics<br>& Visualization
+- Fundamentals of statistical graphs
+- The grammar of graphs
+- Exploratory data analysis in R
+- Advanced visualization and communication ⟶
+- Use cases
+]
+
+.column[
+![:vspace 220]()
+### Data Preprocessing<br>& Reporting
+- Advanced R Markdown for reporting
+- Dashboards in R
+]
+
+---
+class: base24
+
+# Background and Goals
+
+![:vspace 10]()
+
+The learning outcomes of this course are:
+
+- Knowledge of the general principles of analytical design, graphical elements and their visual perception.
+
+- Ability to select the type of representation and graphic elements most appropriate to the type of data and the result to be communicated.
+
+- Ability to read, understand, analyze and elaborate graphic representations with complex data.
+
+- Ability to produce automated reports with reproducible visualizations.
+
+The course is **very practical**, with a mix of master classes, discussion and practice.
+
+---
+class: base24
+
+# Course Contents and Schedule
+
+![:vspace 20]()
+
+- **Week 01-03**: Chapter 1. Fundamentals of Statistical Graphs
+  <br>![:hspace 98]()⟶ (Sep 25) Presentations & discussion 1
+
+- **Week 04-09**: Chapter 2. The Grammar of Graphics in R
+  <br>![:hspace 98]()⟶ (Oct 09) Presentations & discussion 2
+  <br>![:hspace 98]()⟶ (Oct 23) Presentations & discussion 3
+  <br>![:hspace 98]()⟶ (Nov 06) Presentations & discussion 4
+
+- **Week 10-12**: Chapter 3. Exploratory Data Analysis in R
+  <br>![:hspace 98]()⟶ (Nov 20) Presentations & discussion 5
+
+- **Week 13-14**: Chapter 4. Advanced Visualization and Communication
+  <br>![:hspace 98]()⟶ (Dec 04) Presentations & discussion 6
+
+---
+class: base24
+
+# Logistics
+
+![:vspace 20]()
+
+### Slots & Location
+
+- **Tuesdays (all)**: 18:00-19:30 h, room 10.2.5
+- **Thursdays (328)**: 16:15-17:45 h, room 9.1.5
+- **Thursdays (327)**: 18:00-19:30 h, room 9.1.17
+
+### Resources
+
+- **Teaching materials** at https://csslab.uc3m.es/datanaviz
+- We will use [**R**](https://www.r-project.org/) and
+  the [**RStudio**](https://www.rstudio.com/) IDE for all the computational work
+
+.center[
+![:scale 120px](assets/img/R.png)
+![:hspace 90]()
+![:scale 260px](assets/img/RStudio.png)
+]
+
+---
+class: base24
+
+# Communication and Tutoring
+
+![:vspace 20]()
+
+### (Tentative) Office hours
+
+- Monday 15-17 h
+- Friday 15-17 h
+- Please, **make an appointment by email**
+
+I will primarily communicate with you outside of class and office hours
+through [Aula Global](https://aulaglobal.uc3m.es) (updates, grades, ...).
+
+- You can use **course forum** to ask general questions
+- You can contact me by e-mail: [inaki.ucar@uc3m.es](mailto:inaki.ucar@uc3m.es)
+- You may find me at my office: 7.3.J25 (Leganés)
+
+---
+
+# Course Assessment
+
+### **25%** Participation
+
+- Proposed exercises + discussion
+
+### **75%** Final project
+
+- **E1. Chart selection**: Select a graph and send it for approval + scope definition
+- **P1. Chart replication**: Develop R code that replicates the graph step by step
+- **P2. Chart improvement**: Develop R code that improves or changes the graph
+- **S1. Report writing**: Write a Rmd article that discusses and shows your code and results
+- **S2. Project assessment**: Peer-review of other students' projects
+
+```{r gantt-mermaid, echo=FALSE}
+m1 <- DiagrammeR::mermaid("
+gantt
+dateFormat YYYY-MM-DD
+
+section Exploration
+E1 :2025-09-08, 8w
+
+section Programming
+P1 :2025-10-20, 5w
+P2 :2025-11-10, 3w
+
+section Submission
+S1 :2025-11-24, 2w
+S2 :2025-12-08, 1w
+", height="200px")
+
+m1$x$config = list(ganttConfig = list(
+  axisFormatter = list(list(
+    "%b %d", htmlwidgets::JS('function(d){ return d.getDay() == 1 }')))
+))
+
+widgetframe::frameWidget(m1)
+```
+
+---
+class: inverse, center, middle
+
+# Final Project Example:<br>Gapminder’s World Health Chart
+
+---
+class: inverse
+
+<iframe src="https://embed.ted.com/talks/lang/en/hans_rosling_the_best_stats_you_ve_ever_seen" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no"></iframe>
+
+---
+class: base24
+
+# gapminder.org
+
+<iframe src="https://www.gapminder.org/tools/" style="position:absolute;left:0;top:80px;width:100%;height:100%" frameborder="0" scrolling="no"></iframe>
+
+---
+
+# Coordinates and Axes: Base Plot
+
+```{r, echo=FALSE}
+library(tidyverse)
+library(gapminder)
+gapminder <- gapminder %>%
+  mutate(continent = fct_other(continent, drop="Oceania", other_level="Asia"))
+```
+
+```{r axes, fig.asp=0.7, out.width="70%"}
+p <- ggplot(filter(gapminder, year == 2007)) +
+  aes(gdpPercap, lifeExp) + ylab("Life expectancy") + xlab("Income")
+p
+```
+
+---
+
+# Coordinates and Axes: Scales and Breaks
+
+```{r breaks, fig.asp=0.6, out.width="70%"}
+breaks <- 500*2^c(0:8)
+klabel <- scales::label_number(suffix="k", scale=1e-3)
+labels <- c(breaks[1:5], klabel(breaks[-(1:5)]))
+
+p <- p + scale_y_continuous(limits=c(10, 95), breaks=seq(10, 90, 10)) +
+  scale_x_log10(limits=range(breaks), breaks=breaks, labels=labels)
+p
+```
+
+---
+
+# Theme
+
+```{r theme, fig.asp=0.7, out.width="70%"}
+p <- p + theme_classic(base_size=16) +
+  theme(panel.grid.major=element_line(), legend.position="none")
+p
+```
+
+---
+
+# Annotations: Year
+
+```{r year, fig.asp=0.7, out.width="70%"}
+p <- p + geom_text(aes(8000, 50, label=year), size=65, color="lightgray")
+p
+```
+
+---
+
+# Annotations: Income Levels
+
+```{r levels, fig.asp=0.6, out.width="70%"}
+tlevel <- c(1300, 5000, 14000, 40000)
+blevel <- c(3000, 8000, 24000)
+ilevel <- c("INCOME LEVEL 1", "LEVEL 2", "LEVEL 3", "LEVEL 4")
+
+p <- p + geom_vline(xintercept=blevel, color="darkgray") +
+  annotate("text", x=tlevel, y=95, color="darkgray", vjust=0, size=3, label=ilevel) +
+  annotate("text", x=blevel, y=95, color="darkgray", vjust=0, size=5, label="◆")
+p
+```
+
+---
+
+# Annotations: Units
+
+```{r units, fig.asp=0.65, out.width="70%"}
+p <- p +
+  annotate("text", x=128000, y=10, hjust=0.95, vjust=1, size=3,
+           label="per person (GDP/capita, PPP$ inflation-adjusted") +
+  annotate("text", x=500, y=95, hjust=0.5, vjust=-1.5, size=3, angle=90, label="years")
+p
+```
+
+---
+
+# Data: Bubbles
+
+```{r bubbles, fig.asp=0.7, out.width="70%"}
+p <- p + geom_point(aes(color=continent, size=pop), alpha=0.7)
+p
+```
+
+---
+
+# Data: Adjustments
+
+```{r adjustments, fig.asp=0.7, out.width="70%"}
+p <- p + geom_point(aes(size=pop), color="#333333", shape=21) +
+  scale_size_area(max_size=25)
+p
+```
+
+---
+
+# Data: Colors
+
+```{r colors, fig.asp=0.7, out.width="70%"}
+ccolors <- c("#00d5e9", "#7feb00", "#ffe700", "#ff5872")
+p <- p + scale_color_manual(values=ccolors)
+p
+```
+
+---
+
+# Legend
+
+```{r, echo=FALSE}
+world <- map_data("world") %>%
+  filter(region != "Antarctica") %>%
+  mutate(continent = countrycode::countrycode(
+    sourcevar=region, origin="country.name", destination="continent")) %>%
+  mutate(continent = fct_other(continent, drop="Oceania", other_level="Asia")) %>%
+  drop_na(continent)
+```
+
+```{r legend, fig.asp=0.6, out.width="70%"}
+legend <- ggplot(world) +
+  aes(long, lat, group=group, map_id=region, fill=continent) +
+  geom_map(map=world) +
+  scale_fill_manual(values=ccolors) +
+  theme_void() + theme(legend.position="none")
+legend
+```
+
+---
+
+# Everything Together
+
+```{r result, eval=FALSE}
+ggplot(filter(gapminder, year == 2007)) +
+  # coordinates and axes
+  aes(gdpPercap, lifeExp) + ylab("Life expectancy") + xlab("Income") +
+  scale_y_continuous(limits=c(10, 95), breaks=seq(10, 90, 10)) +
+  scale_x_log10(limits=range(breaks), breaks=breaks, labels=labels) +
+  # theme
+  theme_classic(base_size=16) +
+  theme(panel.grid.major=element_line(), legend.position="none") +
+  # annotations
+  geom_text(aes(8000, 50, label=year), size=65, color="lightgray") +
+  geom_vline(xintercept=blevel, color="darkgray") +
+  annotate("text", x=tlevel, y=95, color="darkgray", vjust=0, size=3, label=ilevel) +
+  annotate("text", x=blevel, y=95, color="darkgray", vjust=0, size=5, label="◆") +
+  annotate("text", x=128000, y=10, hjust=0.95, vjust=1, size=3,
+           label="per person (GDP/capita, PPP$ inflation-adjusted") +
+  annotate("text", x=500, y=95, hjust=0.5, vjust=-1.5, size=3, angle=90, label="years") +
+  # data
+  geom_point(aes(color=continent, size=pop), alpha=0.7) +
+  geom_point(aes(size=pop), color="#333333", shape=21) +
+  scale_size_area(max_size=25) + scale_color_manual(values=ccolors) +
+  # legend
+  annotation_custom(ggplotGrob(legend), xmin=log10(16000), ymin=10, ymax=40)
+```
+
+---
+
+# Result
+
+```{r result-out, ref.label="result", echo=FALSE, fig.asp=0.7, out.width="100%"}
+```
+
+---
+
+# Bonus: Multiple Years
+
+```{r facets, fig.asp=0.7, fig.width=10, out.width="100%", echo=FALSE}
+gginnards::delete_layers(p, match_type="GeomText") %+% gapminder +
+  facet_wrap("year", nrow=3) +
+  scale_size_area(max_size=7) +
+  theme(axis.text.x=element_text(angle=45, vjust=1, hjust=1))
+```
+
+---
+
+# Bonus: Dynamic
+
+```{r plotly, fig.asp=0.7, fig.width=5, out.width="100%", echo=FALSE}
+plotly::ggplotly(p %+% gapminder + aes(frame=year))
+```
+
+---
+class: inverse, center, middle
+
+# [Example project](/dataviz/projects/gapminder/)
