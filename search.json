@@ -4,8 +4,8 @@
       "path": "contents.html",
       "title": "Course contents",
       "author": [],
-      "contents": "\nChapter 0. Course Description\nBig picture\nBackground and goals\nCourse contents and schedule\nLogistics\nCommunication and tutoring\nCourse assessment\nExample of final project\n\n\n\n\n\nChapter 1. Fundamentals of Statistical Graphs\nIntroduction to DataViz\nGraphical Integrity\nGraphical Perception\nPrinciples of Graphical Representation\n\n\n\n\n\nChapter 2. The Grammar of Graphs in R\nBuilding Graphs Layer by Layer\nScales and Guides\nCoordinate Systems\nFaceting\nThemes\nAnnotations\nArranging Plots\n\n\n\n\n\nChapter 3. Exploratory Data Analysis in R\nTypes of Data\nCatalog of Graphs and Applications\nDistribution Graphs\nCorrelation Graphs\nRanking Graphs\nPart of a Whole Graphs\nEvolution Graphs\n\n\n\n\n\n\nChapter 4. Advanced Visualization and Communication\nGeospatial Analysis\nMaps\n\nNetwork Analysis\nFlow Charts\n\nOther Resources\nReproducible Documents\n\n\n\n\n\nChapter 5. Use Cases in Statistics\n\n\n\n",
-      "last_modified": "2025-09-06T19:39:02+02:00"
+      "contents": "\nChapter 0. Course Description\nBig picture\nBackground and goals\nCourse contents and schedule\nLogistics\nCommunication and tutoring\nCourse assessment\nExample of project\n\n\n\n\n\nChapter 1. Fundamentals of Statistical Graphs\nIntroduction to DataViz\nGraphical Integrity\nGraphical Perception\nPrinciples of Graphical Representation\n\n\n\n\n\nChapter 2. The Grammar of Graphs in R\nBuilding Graphs Layer by Layer\nScales and Guides\nCoordinate Systems\nFaceting\nThemes\nAnnotations\nArranging Plots\n\n\n\n\n\nChapter 3. Exploratory Data Analysis in R\nTypes of Data\nCatalog of Graphs and Applications\nDistribution Graphs\nCorrelation Graphs\nRanking Graphs\nPart of a Whole Graphs\nEvolution Graphs\n\n\n\n\n\n\nChapter 4. Advanced Visualization and Communication\nGeospatial Analysis\nMaps\n\nNetwork Analysis\nFlow Charts\n\nOther Resources\nReproducible Documents\n\n\n\n\n\n\n\n\n",
+      "last_modified": "2026-09-08T16:54:11+02:00"
     },
     {
       "path": "index.html",
@@ -13,21 +13,21 @@
       "description": "Homepage and materials for the course on\n[data analysis and visualization](https://aplicaciones.uc3m.es/cpa/generaFicha?est=203&anio=2025&plan=560&asig=20352&idioma=2),\nas part of uc3m's\n[Bachelor in Data and Business Analytics](https://www.uc3m.es/bachelor-degree/statistics-business)\n",
       "author": [],
       "contents": "\n\n\n\n\n\n",
-      "last_modified": "2025-09-06T19:39:02+02:00"
+      "last_modified": "2026-09-08T16:54:12+02:00"
     },
     {
       "path": "resources.html",
       "title": "Resources",
       "author": [],
       "contents": "\nRecommended Bibliography\nBasic Bibliography\nMunzner, T. (2014)\nVisualization analysis and design. CRC Press.\nTufte, E. R. (2018)\nThe visual display of quantitative information. Graphics Press.\nWickham, H., & Sievert, C. (2016)\nggplot2: Elegant graphics for data analysis. Springer.\n[online]\nAdditional Bibliography\nCleveland, W. S. (1985)\nThe elements of graphing data. Wadsworth Inc.\nMeirelles, I. (2013)\nDesign for information. Rockport Publishers.\nRahlf, T. (2019)\nData Visualisation with R: 111 examples. Springer.\nTufte, E. R. (2018)\nEnvisioning information. Graphics Press.\nTufte, E. R. (2019)\nVisual explanations: Images and quantities, evidence and narrative.\nGraphics Press.\nTufte, E. R. (2019)\nBeautiful evidence. Graphics Press.\nWare, C. (2021)\nInformation visualization: Perception for design. Elsevier.\nWilkinson, L. (2005)\nThe grammar of graphics. Springer New York.\nOnline Resources\nInspiration for Projects\nProjects section of the sister course in the Master in Computational Social Science.\nIdeas for Projects\nOver 60 New York Times Graphs for Students to Analyze: A collection of graphs, maps and charts organized by topic and graph type from three years of “What’s Going On in This Graph?”\nThe Pew Research Center produces lots of high-quality visualizations of social data.\nThe Economist publishes very nice data-driven stories.\nThe Australian Grattan Institute publishes reports with great visualizations, and each report is accompanied by the data used to create them.\nMiscellanea\nggplot2 docs\nggplot2 extensions\nData visualization with ggplot2 cheatsheet\nAwesome ggplot2\nThe R Graph Gallery\nTidyTuesday\nA ggplot2 Tutorial for Beautiful Plotting in R,\nby Cédric Scherer\n\n\n\n",
-      "last_modified": "2025-09-06T19:39:02+02:00"
+      "last_modified": "2026-09-08T16:54:12+02:00"
     },
     {
       "path": "tutorials.html",
       "title": "Tutorials",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2025-09-06T19:39:03+02:00"
+      "last_modified": "2026-09-08T16:54:13+02:00"
     }
   ],
   "collections": ["tutorials/tutorials.json"]

@@ -20,7 +20,7 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
-class: split-three
+class: base24
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version=FALSE)
@@ -35,6 +35,36 @@ xaringanExtra::use_share_again()
 xaringanExtra::style_share_again(share_buttons="none")
 xaringanExtra::use_scribble()
 ```
+
+# Who
+
+![:vspace 10]()
+
+.font150[**Iñaki Úcar**]
+
+.pull-left[
+Assistant Professor<br>
+Department of Statistics<br>
+uc3m-Santander Big Data Institute
+
+Office: 7.3.J25<br>
+[inaki.ucar@uc3m.es](mailto:inaki.ucar@uc3m.es)
+]
+.pull-right[
+- Telecommunications Engineering
+- R developer for 10+ years
+- 10 packages on [CRAN](https://cran.r-project.org/)
+- [r-simmer.org](r-simmer.org) maintainer
+- [Rcpp](https://www.rcpp.org/) Core team
+]
+
+### Research keywords
+
+data science, interpretability, social networks,<br>
+simulation, statistical software, high-performance computing
+
+---
+class: split-three
 
 # Big Picture
 
@@ -89,18 +119,38 @@ class: base24
 ![:vspace 20]()
 
 - **Week 01-03**: Chapter 1. Fundamentals of Statistical Graphs
-  <br>![:hspace 98]()⟶ (Sep 25) Presentations & discussion 1
 
-- **Week 04-09**: Chapter 2. The Grammar of Graphics in R
-  <br>![:hspace 98]()⟶ (Oct 09) Presentations & discussion 2
-  <br>![:hspace 98]()⟶ (Oct 23) Presentations & discussion 3
-  <br>![:hspace 98]()⟶ (Nov 06) Presentations & discussion 4
+- **Week 04-11**: Chapters 2-3. Exploratory Data Analysis through The Grammar of Graphics in R
+  <br>![:hspace 98]()⟶ (Sep 24) Presentations & discussion 1
+  <br>![:hspace 98]()⟶ (Oct 08) Presentations & discussion 2
+  <br>![:hspace 98]()⟶ (Oct 22) Presentations & discussion 3
+  <br>![:hspace 98]()⟶ (Nov 05) Presentations & discussion 4
+  <br>![:hspace 98]()⟶ (Nov 19) Presentations & discussion 5
 
-- **Week 10-12**: Chapter 3. Exploratory Data Analysis in R
-  <br>![:hspace 98]()⟶ (Nov 20) Presentations & discussion 5
+- **Week 12-14**: Chapter 4. Advanced Visualization and Communication
+  <br>![:hspace 98]()⟶ (Dec 03) Presentations & discussion 6
 
-- **Week 13-14**: Chapter 4. Advanced Visualization and Communication
-  <br>![:hspace 98]()⟶ (Dec 04) Presentations & discussion 6
+---
+class: base24
+
+# Work Dynamic
+
+![:vspace 10]()
+
+First 2 weeks of **fundamentals**, then
+
+- Thursday: **Presentations & discussion**
+  - Graph selection for next challenge
+- Tuesday: **Challenge opens**
+  - Intro to next discussion (next type of graph)
+  - Practice in class 
+- Thursday:
+  - Practice in class
+  - Dive into some `ggplot2` topic
+- Tuesday: **Challenge closes**
+  - Review of solutions
+
+and repeat
 
 ---
 class: base24
@@ -148,50 +198,49 @@ through [Aula Global](https://aulaglobal.uc3m.es) (updates, grades, ...).
 - You may find me at my office: 7.3.J25 (Leganés)
 
 ---
+class: base24
 
 # Course Assessment
 
+![:vspace 20]()
+
 ### **25%** Participation
 
-- Proposed exercises + discussion
+- In class practice + discussion
 
-### **75%** Final project
+### **75%** Challenges
 
-- **E1. Chart selection**: Select a graph and send it for approval + scope definition
-- **P1. Chart replication**: Develop R code that replicates the graph step by step
-- **P2. Chart improvement**: Develop R code that improves or changes the graph
-- **S1. Report writing**: Write a Rmd article that discusses and shows your code and results
-- **S2. Project assessment**: Peer-review of other students' projects
+- Challenge 1: Distribution graphs
+- Challenge 2: Correlation graphs
+- Challenge 3: Ranking graphs
+- Challenge 4: Part of a whole graphs
+- Challenge 5: Evolution graphs
+- Challenge 6: Maps
 
-```{r gantt-mermaid, echo=FALSE}
-m1 <- DiagrammeR::mermaid("
-gantt
-dateFormat YYYY-MM-DD
+---
+class: base24
 
-section Exploration
-E1 :2025-09-08, 8w
+# Preparations for Discussions
 
-section Programming
-P1 :2025-10-20, 5w
-P2 :2025-11-10, 3w
+![:vspace 10]()
 
-section Submission
-S1 :2025-11-24, 2w
-S2 :2025-12-08, 1w
-", height="200px")
+In groups of 2 students (will be randomized and assigned by the instructor),
+you will be asked to prepare a **short presentation** (10 min) on a specific type of graph, including:
 
-m1$x$config = list(ganttConfig = list(
-  axisFormatter = list(list(
-    "%b %d", htmlwidgets::JS('function(d){ return d.getDay() == 1 }')))
-))
+- **Your full names**
+- 4 different graphs (from different sources, **not made with ggplot2**)
+- Link to the source
+- Main strengths and weaknesses of each graph
+- Assessment of the level of reproducibility (data availability, complexity)
 
-widgetframe::frameWidget(m1)
-```
+Presentations will be uploaded to Aula Global in advance (by one of the group members)
+
+See the [resources section](https://csslab.uc3m.es/datanaviz/resources.html) for initial pointers
 
 ---
 class: inverse, center, middle
 
-# Final Project Example:<br>Gapminder’s World Health Chart
+# Project Example:<br>Gapminder’s World Health Chart
 
 ---
 class: inverse
@@ -242,7 +291,7 @@ p
 
 ```{r theme, fig.asp=0.7, out.width="70%"}
 p <- p + theme_classic(base_size=16) +
-  theme(panel.grid.major=element_line(), legend.position="none")
+  theme(panel.grid.major=element_line(color="gray90"), legend.position="none")
 p
 ```
 
@@ -345,7 +394,7 @@ ggplot(filter(gapminder, year == 2007)) +
   scale_x_log10(limits=range(breaks), breaks=breaks, labels=labels) +
   # theme
   theme_classic(base_size=16) +
-  theme(panel.grid.major=element_line(), legend.position="none") +
+  theme(panel.grid.major=element_line(color="gray90"), legend.position="none") +
   # annotations
   geom_text(aes(8000, 50, label=year), size=65, color="lightgray") +
   geom_vline(xintercept=blevel, color="darkgray") +
@@ -359,7 +408,7 @@ ggplot(filter(gapminder, year == 2007)) +
   geom_point(aes(size=pop), color="#333333", shape=21) +
   scale_size_area(max_size=25) + scale_color_manual(values=ccolors) +
   # legend
-  annotation_custom(ggplotGrob(legend), xmin=log10(16000), ymin=10, ymax=40)
+  annotation_custom(ggplotGrob(legend), xmin=16000, ymin=10, ymax=40)
 ```
 
 ---
@@ -368,27 +417,3 @@ ggplot(filter(gapminder, year == 2007)) +
 
 ```{r result-out, ref.label="result", echo=FALSE, fig.asp=0.7, out.width="100%"}
 ```
-
----
-
-# Bonus: Multiple Years
-
-```{r facets, fig.asp=0.7, fig.width=10, out.width="100%", echo=FALSE}
-gginnards::delete_layers(p, match_type="GeomText") %+% gapminder +
-  facet_wrap("year", nrow=3) +
-  scale_size_area(max_size=7) +
-  theme(axis.text.x=element_text(angle=45, vjust=1, hjust=1))
-```
-
----
-
-# Bonus: Dynamic
-
-```{r plotly, fig.asp=0.7, fig.width=5, out.width="100%", echo=FALSE}
-plotly::ggplotly(p %+% gapminder + aes(frame=year))
-```
-
----
-class: inverse, center, middle
-
-# [Example project](/dataviz/projects/gapminder/)

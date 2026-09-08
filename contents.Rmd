@@ -10,7 +10,7 @@ title: "Course contents"
 - Logistics
 - Communication and tutoring
 - Course assessment
-- [Example of final project](slides/ch0.html#8)
+- [Example of project](slides/ch0.html#8)
 
 <aside class="slides">
 ```{r, echo=FALSE}
@@ -78,4 +78,6 @@ xaringanExtra::embed_xaringan("slides/ch4_2.html", "4:3")
 ```
 </aside>
 
+<!--
 ## Chapter 5. Use Cases in Statistics
+-->
