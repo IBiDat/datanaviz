@@ -10,7 +10,7 @@ title: "Course contents"
 - Logistics
 - Communication and tutoring
 - Course assessment
-- [Example of project](slides/ch0.html#8)
+- [Example of project](slides/ch0.html#11)
 
 <aside class="slides">
 ```{r, echo=FALSE}
