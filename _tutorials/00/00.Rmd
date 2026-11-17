@@ -349,7 +349,6 @@ If you double-click the `.R` file instead, RStudio opens it **outside the projec
 
 ```r
 # Challenge XX
-# Name: Your Name
 
 # 1. Load packages ------------------------------------------------------
 library(ggplot2)
